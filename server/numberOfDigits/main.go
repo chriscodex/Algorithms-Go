@@ -7,4 +7,5 @@ type reqStruct struct {
 type resStruct struct {
 	CantidadDigitos int    `json:"cantidad_de_digitos"`
 	Digitos         string `json:"digitos"`
+	SumaDigitos     int    `json:"suma_de_digitos"`
 }
