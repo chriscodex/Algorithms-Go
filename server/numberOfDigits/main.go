@@ -5,4 +5,5 @@ type reqStruct struct {
 }
 
 type resStruct struct {
+	CantidadDigitos int `json:"cantidad_de_digitos"`
 }
