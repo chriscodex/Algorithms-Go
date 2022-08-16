@@ -9,4 +9,5 @@ type resStruct struct {
 	Digitos         string `json:"digitos"`
 	SumaDigitos     int    `json:"suma_de_digitos"`
 	DigitoMayor     int    `json:"digito_mayor"`
+	DigitoMenor     int    `json:"digito_menor"`
 }
