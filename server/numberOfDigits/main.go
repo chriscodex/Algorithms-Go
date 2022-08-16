@@ -10,4 +10,5 @@ type resStruct struct {
 	SumaDigitos     int    `json:"suma_de_digitos"`
 	DigitoMayor     int    `json:"digito_mayor"`
 	DigitoMenor     int    `json:"digito_menor"`
+	NumeroInvertido int    `json:"numero_invertido"`
 }
