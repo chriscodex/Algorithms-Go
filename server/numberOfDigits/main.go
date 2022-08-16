@@ -11,4 +11,5 @@ type resStruct struct {
 	DigitoMayor     int    `json:"digito_mayor"`
 	DigitoMenor     int    `json:"digito_menor"`
 	NumeroInvertido int    `json:"numero_invertido"`
+	Capicua         bool   `json:"capicua"`
 }
