@@ -23,4 +23,5 @@ func showDigits(number string) string {
 		cont++
 	}
 	str += string(number[cont])
+	return str
 }
