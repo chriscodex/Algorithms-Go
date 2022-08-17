@@ -16,4 +16,5 @@ type resStruct struct {
 
 func showDigits(number string) string {
 	var cont int
+	var str string
 }
