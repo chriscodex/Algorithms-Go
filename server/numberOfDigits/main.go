@@ -25,3 +25,7 @@ func showDigits(number string) string {
 	str += string(number[cont])
 	return str
 }
+
+func digitsSum(number string) int {
+
+}
