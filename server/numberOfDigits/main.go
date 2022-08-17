@@ -20,5 +20,6 @@ func showDigits(number string) string {
 	for cont < len(number)-1 {
 		str += string(number[cont])
 		str += ", "
+		cont++
 	}
 }
