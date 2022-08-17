@@ -13,3 +13,7 @@ type resStruct struct {
 	NumeroInvertido int    `json:"numero_invertido"`
 	Capicua         bool   `json:"capicua"`
 }
+
+func showDigits(number string) string {
+
+}
