@@ -27,5 +27,5 @@ func showDigits(number string) string {
 }
 
 func digitsSum(number string) int {
-
+	var sum int
 }
