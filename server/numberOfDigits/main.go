@@ -18,6 +18,6 @@ func showDigits(number string) string {
 	var cont int
 	var str string
 	for cont < len(number)-1 {
-
+		str += string(number[cont])
 	}
 }
