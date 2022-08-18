@@ -36,3 +36,7 @@ func digitsSum(number string) int {
 	}
 	return sum
 }
+
+func biggerAndMinorDigit(number string) (int, int) {
+
+}
