@@ -1,5 +1,7 @@
 package main
 
+import "strconv"
+
 type reqStruct struct {
 	Number int `json:"number"`
 }
@@ -29,6 +31,6 @@ func showDigits(number string) string {
 func digitsSum(number string) int {
 	var sum int
 	for _, e := range number {
-
+		val, _ := strconv.Atoi(string(e))
 	}
 }
