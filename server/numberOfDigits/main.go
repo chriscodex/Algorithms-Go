@@ -34,4 +34,5 @@ func digitsSum(number string) int {
 		val, _ := strconv.Atoi(string(e))
 		sum += val
 	}
+	return sum
 }
