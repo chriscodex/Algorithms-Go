@@ -40,4 +40,5 @@ func digitsSum(number string) int {
 func biggerAndMinorDigit(number string) (int, int) {
 	var bigger int
 	minor, _ := strconv.Atoi(string(number[0]))
+	var cont int
 }
