@@ -43,5 +43,8 @@ func biggerAndMinorDigit(number string) (int, int) {
 	var cont int
 	for cont < len(number) {
 		n, _ := strconv.Atoi(string(number[cont]))
+		if n > bigger {
+
+		}
 	}
 }
