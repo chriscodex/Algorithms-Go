@@ -32,5 +32,6 @@ func digitsSum(number string) int {
 	var sum int
 	for _, e := range number {
 		val, _ := strconv.Atoi(string(e))
+		sum += val
 	}
 }
