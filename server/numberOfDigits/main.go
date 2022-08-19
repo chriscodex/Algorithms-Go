@@ -53,3 +53,7 @@ func biggerAndMinorDigit(number string) (int, int) {
 	}
 	return bigger, minor
 }
+
+func reverseNumber(s string) int {
+
+}
