@@ -46,5 +46,8 @@ func biggerAndMinorDigit(number string) (int, int) {
 		if n > bigger {
 			bigger = n
 		}
+		if n < minor {
+
+		}
 	}
 }
