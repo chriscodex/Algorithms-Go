@@ -57,6 +57,6 @@ func biggerAndMinorDigit(number string) (int, int) {
 func reverseNumber(s string) int {
 	var str string
 	for i := len(s) - 1; i >= 0; i-- {
-
+		str += string(s[i])
 	}
 }
