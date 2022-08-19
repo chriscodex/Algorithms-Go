@@ -61,5 +61,4 @@ func reverseNumber(s string) int {
 	}
 	revNum, _ := strconv.Atoi(str)
 	return revNum
-
 }
