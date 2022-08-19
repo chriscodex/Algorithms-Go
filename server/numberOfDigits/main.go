@@ -59,4 +59,6 @@ func reverseNumber(s string) int {
 	for i := len(s) - 1; i >= 0; i-- {
 		str += string(s[i])
 	}
+	revNum, _ := strconv.Atoi(str)
+
 }
