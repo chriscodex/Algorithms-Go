@@ -55,5 +55,5 @@ func biggerAndMinorDigit(number string) (int, int) {
 }
 
 func reverseNumber(s string) int {
-
+	var str string
 }
