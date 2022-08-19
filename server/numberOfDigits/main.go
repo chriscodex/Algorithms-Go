@@ -51,4 +51,5 @@ func biggerAndMinorDigit(number string) (int, int) {
 		}
 		cont++
 	}
+	return bigger, minor
 }
