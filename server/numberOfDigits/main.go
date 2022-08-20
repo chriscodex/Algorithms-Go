@@ -76,5 +76,6 @@ func digitsProblemHandler(w http.ResponseWriter, r *http.Request) {
 	cantDigitos := len(numberStr)
 	digitos := showDigits(numberStr)
 	sum := digitsSum(numberStr)
+	bigger, minor := biggerAndMinorDigit(numberStr)
 
 }
