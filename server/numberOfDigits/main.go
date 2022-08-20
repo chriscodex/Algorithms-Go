@@ -75,5 +75,6 @@ func digitsProblemHandler(w http.ResponseWriter, r *http.Request) {
 	numberStr := strconv.Itoa(num.Number)
 	cantDigitos := len(numberStr)
 	digitos := showDigits(numberStr)
+	sum := digitsSum(numberStr)
 
 }
