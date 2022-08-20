@@ -78,5 +78,6 @@ func digitsProblemHandler(w http.ResponseWriter, r *http.Request) {
 	sum := digitsSum(numberStr)
 	bigger, minor := biggerAndMinorDigit(numberStr)
 	reverse := reverseNumber(numberStr)
+	capicua := strconv.Itoa(reverse) == numberStr
 
 }
