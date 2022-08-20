@@ -72,4 +72,6 @@ func digitsProblemHandler(w http.ResponseWriter, r *http.Request) {
 	num := reqStruct{}
 	decode.Decode(&num)
 
+	numberStr := strconv.Itoa(num.Number)
+
 }
