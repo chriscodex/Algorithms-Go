@@ -73,5 +73,6 @@ func digitsProblemHandler(w http.ResponseWriter, r *http.Request) {
 	decode.Decode(&num)
 
 	numberStr := strconv.Itoa(num.Number)
+	cantDigitos := len(numberStr)
 
 }
