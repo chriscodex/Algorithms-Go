@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"net/http"
 	"strconv"
 )
@@ -67,5 +68,6 @@ func reverseNumber(s string) int {
 }
 
 func digitsProblemHandler(w http.ResponseWriter, r *http.Request) {
+	decode := json.NewDecoder(r.Body)
 
 }
