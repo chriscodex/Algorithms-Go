@@ -69,5 +69,6 @@ func reverseNumber(s string) int {
 
 func digitsProblemHandler(w http.ResponseWriter, r *http.Request) {
 	decode := json.NewDecoder(r.Body)
+	num := reqStruct{}
 
 }
