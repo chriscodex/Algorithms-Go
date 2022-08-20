@@ -1,6 +1,9 @@
 package main
 
-import "strconv"
+import (
+	"net/http"
+	"strconv"
+)
 
 type reqStruct struct {
 	Number int `json:"number"`
@@ -61,4 +64,8 @@ func reverseNumber(s string) int {
 	}
 	revNum, _ := strconv.Atoi(str)
 	return revNum
+}
+
+func digitsProblemHandler(w http.ResponseWriter, r *http.Request) {
+
 }
