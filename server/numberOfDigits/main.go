@@ -90,4 +90,6 @@ func digitsProblemHandler(w http.ResponseWriter, r *http.Request) {
 		Capicua:         capicua,
 	}
 
+	response, err := json.Marshal(res)
+
 }
