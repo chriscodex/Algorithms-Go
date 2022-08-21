@@ -87,6 +87,7 @@ func digitsProblemHandler(w http.ResponseWriter, r *http.Request) {
 		DigitoMayor:     bigger,
 		DigitoMenor:     minor,
 		NumeroInvertido: reverse,
+		Capicua:         capicua,
 	}
 
 }
