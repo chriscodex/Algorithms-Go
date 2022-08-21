@@ -84,6 +84,7 @@ func digitsProblemHandler(w http.ResponseWriter, r *http.Request) {
 		CantidadDigitos: cantDigitos,
 		Digitos:         digitos,
 		SumaDigitos:     sum,
+		DigitoMayor:     bigger,
 	}
 
 }
