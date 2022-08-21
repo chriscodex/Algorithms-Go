@@ -92,7 +92,7 @@ func digitsProblemHandler(w http.ResponseWriter, r *http.Request) {
 
 	response, err := json.Marshal(res)
 	if err != nil {
-
+		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}
 
 }
