@@ -80,4 +80,5 @@ func digitsProblemHandler(w http.ResponseWriter, r *http.Request) {
 	reverse := reverseNumber(numberStr)
 	capicua := strconv.Itoa(reverse) == numberStr
 
+	res := resStruct{}
 }
