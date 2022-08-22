@@ -31,7 +31,7 @@ func main() {
 		fmt.Println("Error, ingrese un numero menor a 256")
 		return
 	}
-	div(8)
+	div(num)
 	if len(arr) < 8 {
 		tam := 8 - len(arr)
 		for i := 0; i < tam; i++ {
