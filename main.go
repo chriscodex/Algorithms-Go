@@ -28,7 +28,7 @@ func main() {
 	scanner.Scan()
 	num, _ := strconv.Atoi(string(scanner.Text()))
 	if num > 255 {
-		fmt.Println("Error, ingrese un numero menor a 256")
+		fmt.Println("Error, enter a number less than 256")
 		return
 	}
 	div(num)
