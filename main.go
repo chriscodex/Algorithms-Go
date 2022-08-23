@@ -1,45 +1,32 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
-	"strconv"
 )
 
-var base = 2
-var arr []int
-var bin []int
-
-func div(c int) int {
-	if c <= 1 {
-		arr = append(arr, c%base)
-		return 1
-	}
-	if c >= base {
-		arr = append(arr, c%base)
-		return div(c / base)
-	}
-	return div(c / base)
+func main(){
+	arr := []string{"++-++++123+++","+321"}
+	fmt.Println(arr)
+	arr = delm(arr)
+	fmt.Println(arr)
 }
 
-func main() {
-	scanner := bufio.NewScanner(os.Stdin)
-	scanner.Scan()
-	num, _ := strconv.Atoi(string(scanner.Text()))
-	if num > 255 {
-		fmt.Println("Error, enter a number less than 256")
-		return
+func delm(arr []string) []string {
+	cont := false
+	for _,e := range arr {
+                if string(e[0])=="+" || string(e[0])=="-" ||
+		string(e[0])==" " {
+			cont = true
+                }
+        }
+	if !cont {
+		return arr
 	}
-	div(num)
-	if len(arr) < 8 {
-		tam := 8 - len(arr)
-		for i := 0; i < tam; i++ {
-			arr = append(arr, 0)
-		}
-	}
-	for i := len(arr) - 1; i >= 0; i-- {
-		bin = append(bin, arr[i])
-	}
-	fmt.Println(bin)
+	for i,e := range arr {
+                if string(e[0])=="+" || string(e[0])=="-" || 
+		string(e[0])==" " {
+			arr[i]=e[1:]
+               	}
+       	}
+	return delm(arr)	
 }
