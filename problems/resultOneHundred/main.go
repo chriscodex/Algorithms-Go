@@ -14,7 +14,9 @@ func main() {
 	//num := 33 1 + 32
 	generate(len(inp), inp)
 	perm = deleter(perm)
-	fmt.Println(perm)
+	for _, e := range perm {
+		fmt.Println(e)
+	}
 }
 
 // Heap Algorithm
@@ -42,16 +44,22 @@ func generate(n int, arr []string) {
 }
 
 func deleter(arr []string) []string {
-	cont := false
+	flag := false
 	for _, e := range arr {
+		if string(e[len(e)-1]) == "+" || string(e[len(e)-1]) == "-" || string(e[len(e)-1]) == " " {
+			flag = true
+		}
 		if string(e[0]) == "+" || string(e[0]) == "-" || string(e[0]) == " " {
-			cont = true
+			flag = true
 		}
 	}
-	if !cont {
+	if !flag {
 		return arr
 	}
 	for i, e := range arr {
+		if string(e[len(e)-1]) == "+" || string(e[len(e)-1]) == "-" || string(e[len(e)-1]) == " " {
+			arr[i] = e[:(len(e) - 1)]
+		}
 		if string(e[0]) == "+" || string(e[0]) == "-" || string(e[0]) == " " {
 			arr[i] = e[1:]
 		}
