@@ -1,5 +1,7 @@
 package main
 
+// Recursive Algorithm - Calculate the factorial of a number n
+
 import "fmt"
 
 func main() {
