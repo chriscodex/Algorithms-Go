@@ -7,3 +7,10 @@ func main() {
 	s := sum(arr, 0)
 	fmt.Println(s)
 }
+
+func sum(arr []int, pos int) int {
+	if pos == len(arr)-1 {
+		return arr[pos]
+	}
+	return arr[pos] + sum(arr, pos+1)
+}
