@@ -1,5 +1,7 @@
 package main
 
+// Recursive Algorithm - Calculate the sum of the elements of an array
+
 import "fmt"
 
 func main() {
