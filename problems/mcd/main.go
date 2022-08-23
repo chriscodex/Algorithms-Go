@@ -1,6 +1,6 @@
 package main
 
-// Calculate the greatest common factor of 2 numbers
+// Recursive Algorithm - Calculate the greatest common factor of 2 numbers
 
 import "fmt"
 
