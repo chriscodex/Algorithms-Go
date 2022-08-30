@@ -1,6 +1,6 @@
 package main
 
-/* Send a string and group 3 by 3 */
+/* Send a string and group characteres 3 by 3 */
 func getThreeFirst(s string) *[]string {
 	arr := []string{}
 	str := ""
