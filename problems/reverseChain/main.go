@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+/* Print a string backwards using recurivity */
+
 var arr []string
 
 func main() {
