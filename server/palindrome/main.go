@@ -9,3 +9,7 @@ func palindrome(s string) bool {
 	}
 	return str == s
 }
+
+type palindromeModel struct {
+	Chain string `json:"chain"`
+}
