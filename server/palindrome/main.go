@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"log"
 	"net/http"
+
+	"github.com/gorilla/mux"
 )
 
 /* Build a server where the client sends a word and the server responds if it is a palindrome or not */
@@ -37,4 +39,15 @@ func palindromeHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 	w.Write(response)
+}
+
+func main() {
+	router := mux.NewRouter()
+
+	router.HandleFunc("/palindrome", palindromeHandler).Methods(http.MethodPost)
+
+	err := http.ListenAndServe(":8080", router)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
