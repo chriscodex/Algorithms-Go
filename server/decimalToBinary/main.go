@@ -37,6 +37,11 @@ func decimalToBinaryHandler(w http.ResponseWriter, r *http.Request) {
 
 	res := decimalToBinary(req.Number)
 
+	resp, err := json.Marshal(res)
+	if err != nil {
+		log.Println(err)
+	}
+
 }
 
 func main() {
