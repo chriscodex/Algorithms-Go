@@ -20,3 +20,7 @@ func decimalToBinary(n int) string {
 	rr = append(rr, n%2)
 	return decimalToBinary(c)
 }
+
+type decimalToBin struct {
+	Number int `json:"number"`
+}
