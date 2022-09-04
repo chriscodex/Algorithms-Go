@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"log"
 	"net/http"
 	"strconv"
@@ -27,6 +28,15 @@ func decimalToBinary(n int) string {
 
 type decimalToBin struct {
 	Number int `json:"number"`
+}
+
+func decimalToBinaryHandler(w http.ResponseWriter, r *http.Request) {
+	decoder := json.NewDecoder(r.Body)
+	req := decimalToBin{}
+	decoder.Decode(&req)
+
+	res := decimalToBinary(req.Number)
+
 }
 
 func main() {
