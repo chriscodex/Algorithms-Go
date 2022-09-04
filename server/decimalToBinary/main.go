@@ -1,7 +1,11 @@
 package main
 
 import (
+	"log"
+	"net/http"
 	"strconv"
+
+	"github.com/gorilla/mux"
 )
 
 var rr []int
@@ -23,4 +27,15 @@ func decimalToBinary(n int) string {
 
 type decimalToBin struct {
 	Number int `json:"number"`
+}
+
+func main() {
+	router := mux.NewRouter()
+
+	router.HandleFunc("/decimalToBinary", decimalToBinaryHandler).Methods(http.MethodPost)
+
+	err := http.ListenAndServe(":8080", router)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
