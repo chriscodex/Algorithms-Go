@@ -65,6 +65,10 @@ func subnetmaskHandler(w http.ResponseWriter, r *http.Request) {
 	decoder := json.NewDecoder(r.Body)
 	hosts := subnet{}
 	err := decoder.Decode(&hosts)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+	subnetmask := maskSubNet(hosts.Hosts)
 
 }
 
