@@ -70,6 +70,11 @@ func subnetmaskHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	subnetmask := maskSubNet(hosts.Hosts)
 
+	response, err := json.Marshal(subnetmask)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
+
 }
 
 func main() {
