@@ -21,7 +21,7 @@ func bitess(res int, p int) int {
 
 func powTwo(n int) int {
 	for i := 0; i <= 31; i++ {
-		p := int(math.Pow(2, float64(i)))
+		p := int(math.Pow(2, float64(i))) - 2
 		if p >= n {
 			return i
 		}
