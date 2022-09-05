@@ -1,8 +1,12 @@
 package main
 
 import (
+	"log"
 	"math"
+	"net/http"
 	"strconv"
+
+	"github.com/gorilla/mux"
 )
 
 func bitess(res int, p int) int {
@@ -54,4 +58,15 @@ func maskSubNet(num int) string {
 
 type subnet struct {
 	Hosts int `json:"hosts"`
+}
+
+func main() {
+	router := mux.NewRouter()
+
+	router.HandleFunc("/subnetmask", subnetmaskHandler).Methods(http.MethodPost)
+
+	err := http.ListenAndServe(":8080", router)
+	if err != nil {
+		log.Fatal(err)
+	}
 }
