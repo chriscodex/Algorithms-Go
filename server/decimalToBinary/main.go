@@ -42,6 +42,9 @@ func decimalToBinaryHandler(w http.ResponseWriter, r *http.Request) {
 		log.Println(err)
 	}
 
+	w.Header().Set("Content-Type", "application/json")
+	w.WriteHeader(200)
+	w.Write(resp)
 }
 
 func main() {
