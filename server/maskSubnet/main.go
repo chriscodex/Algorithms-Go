@@ -51,3 +51,7 @@ func maskSubNet(num int) string {
 	}
 	return ""
 }
+
+type subnet struct {
+	Hosts int `json:"hosts"`
+}
