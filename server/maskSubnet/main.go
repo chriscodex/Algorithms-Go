@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"log"
 	"math"
 	"net/http"
@@ -58,6 +59,13 @@ func maskSubNet(num int) string {
 
 type subnet struct {
 	Hosts int `json:"hosts"`
+}
+
+func subnetmaskHandler(w http.ResponseWriter, r *http.Request) {
+	decoder := json.NewDecoder(r.Body)
+	hosts := subnet{}
+	err := decoder.Decode(&hosts)
+
 }
 
 func main() {
