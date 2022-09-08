@@ -15,6 +15,11 @@ func isValid(s string) bool {
 			stack = append(stack, value)
 			continue
 		}
+		l := len(stack) - 1
+		if l < 0 || stack[l] != e {
+			return false
+		}
+		stack = stack[:l]
 	}
 	return len(stack) == 0
 }
