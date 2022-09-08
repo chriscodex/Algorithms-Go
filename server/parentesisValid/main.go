@@ -10,4 +10,11 @@ func isValid(s string) bool {
 		'{': '}',
 		'[': ']',
 	}
+	for _, e := range s {
+		if value, ok := m[e]; ok {
+			stack = append(stack, value)
+			continue
+		}
+	}
+	return len(stack) == 0
 }
