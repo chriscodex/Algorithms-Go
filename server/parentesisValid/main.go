@@ -1,5 +1,7 @@
 package main
 
+import "github.com/gorilla/mux"
+
 func isValid(s string) bool {
 	if len(s)%2 != 0 {
 		return false
@@ -29,5 +31,5 @@ type parentheses struct {
 }
 
 func main() {
-
+	router := mux.NewRouter()
 }
