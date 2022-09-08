@@ -27,3 +27,7 @@ func isValid(s string) bool {
 type parentheses struct {
 	Input string `json:"input"`
 }
+
+func main() {
+
+}
