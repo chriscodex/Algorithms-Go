@@ -35,6 +35,10 @@ type parentheses struct {
 	Input string `json:"input"`
 }
 
+func vpHandler(w http.ResponseWriter, r *http.Request) {
+
+}
+
 func main() {
 	router := mux.NewRouter()
 
