@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"log"
 	"net/http"
 
@@ -36,7 +37,7 @@ type parentheses struct {
 }
 
 func vpHandler(w http.ResponseWriter, r *http.Request) {
-
+	decoder := json.NewDecoder(r.Body)
 }
 
 func main() {
