@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -38,4 +39,8 @@ func main() {
 	router := mux.NewRouter()
 
 	router.HandleFunc("/validparentheses", vpHandler).Methods(http.MethodPost)
+
+	if err := http.ListenAndServe(":8080", router); err != nil {
+		log.Fatal(err)
+	}
 }
