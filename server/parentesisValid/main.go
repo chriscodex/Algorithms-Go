@@ -42,6 +42,11 @@ func vpHandler(w http.ResponseWriter, r *http.Request) {
 	par := parentheses{}
 
 	err := decoder.Decode(&par)
+
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
 }
 
 func main() {
