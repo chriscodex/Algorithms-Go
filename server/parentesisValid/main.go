@@ -1,6 +1,10 @@
 package main
 
-import "github.com/gorilla/mux"
+import (
+	"net/http"
+
+	"github.com/gorilla/mux"
+)
 
 func isValid(s string) bool {
 	if len(s)%2 != 0 {
@@ -32,4 +36,6 @@ type parentheses struct {
 
 func main() {
 	router := mux.NewRouter()
+
+	router.HandleFunc("/validparentheses", vpHandler).Methods(http.MethodPost)
 }
