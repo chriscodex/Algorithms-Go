@@ -50,6 +50,8 @@ func vpHandler(w http.ResponseWriter, r *http.Request) {
 
 	res := isValid(par.Input)
 
+	response, err := json.Marshal(res)
+
 }
 
 func main() {
