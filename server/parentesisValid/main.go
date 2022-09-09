@@ -38,6 +38,9 @@ type parentheses struct {
 
 func vpHandler(w http.ResponseWriter, r *http.Request) {
 	decoder := json.NewDecoder(r.Body)
+
+	par := parentheses{}
+
 }
 
 func main() {
