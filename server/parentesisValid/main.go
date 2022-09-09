@@ -41,6 +41,7 @@ func vpHandler(w http.ResponseWriter, r *http.Request) {
 
 	par := parentheses{}
 
+	err := decoder.Decode(&par)
 }
 
 func main() {
