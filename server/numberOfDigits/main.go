@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 	"strconv"
+
+	"github.com/gorilla/mux"
 )
 
 type reqStruct struct {
@@ -100,5 +102,5 @@ func digitsProblemHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-
+	router := mux.NewRouter()
 }
