@@ -103,4 +103,6 @@ func digitsProblemHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	router := mux.NewRouter()
+	router.HandleFunc("/digits", digitsProblemHandler).Methods(http.MethodPost)
+
 }
