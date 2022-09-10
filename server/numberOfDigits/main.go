@@ -105,4 +105,6 @@ func main() {
 	router := mux.NewRouter()
 	router.HandleFunc("/digits", digitsProblemHandler).Methods(http.MethodPost)
 
+	err := http.ListenAndServe(":8080", router)
+
 }
