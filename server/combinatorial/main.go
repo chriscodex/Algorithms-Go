@@ -11,3 +11,7 @@ func factorial(n int) int {
 	}
 	return n * factorial(n-1)
 }
+
+func comb(m int, n int) int {
+
+}
