@@ -24,6 +24,10 @@ func comb(m int, n int) int {
 	return factorial(m) / divs
 }
 
+func combinatorialHandler(w http.ResponseWriter, r *http.Request) {
+
+}
+
 func main() {
 	router := mux.NewRouter()
 
