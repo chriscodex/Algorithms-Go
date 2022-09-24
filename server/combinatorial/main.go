@@ -1,6 +1,10 @@
 package main
 
-import "github.com/gorilla/mux"
+import (
+	"net/http"
+
+	"github.com/gorilla/mux"
+)
 
 type Numbs struct {
 	Num1 int `json:"num_1"`
@@ -21,4 +25,6 @@ func comb(m int, n int) int {
 
 func main() {
 	router := mux.NewRouter()
+
+	router.HandleFunc("/combinatorial", combinatorialHandler).Methods(http.MethodPost)
 }
