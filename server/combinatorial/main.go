@@ -27,4 +27,6 @@ func main() {
 	router := mux.NewRouter()
 
 	router.HandleFunc("/combinatorial", combinatorialHandler).Methods(http.MethodPost)
+
+	err := http.ListenAndServe(":8080", router)
 }
