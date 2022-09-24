@@ -14,4 +14,5 @@ func factorial(n int) int {
 
 func comb(m int, n int) int {
 	divs := factorial(m-n) * factorial(n)
+	return factorial(m) / divs
 }
