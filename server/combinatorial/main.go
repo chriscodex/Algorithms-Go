@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"log"
 	"net/http"
 
@@ -25,7 +26,7 @@ func comb(m int, n int) int {
 }
 
 func combinatorialHandler(w http.ResponseWriter, r *http.Request) {
-
+	decoder := json.NewDecoder(r.Body)
 }
 
 func main() {
