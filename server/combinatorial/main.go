@@ -28,6 +28,7 @@ func comb(m int, n int) int {
 func combinatorialHandler(w http.ResponseWriter, r *http.Request) {
 	decoder := json.NewDecoder(r.Body)
 	numbs := Numbs{}
+	decoder.Decode(&numbs)
 }
 
 func main() {
