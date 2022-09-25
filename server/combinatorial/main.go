@@ -31,6 +31,7 @@ func combinatorialHandler(w http.ResponseWriter, r *http.Request) {
 	decoder.Decode(&numbs)
 
 	combinator := comb(numbs.Num1, numbs.Num2)
+	res, err := json.Marshal(combinator)
 }
 
 func main() {
