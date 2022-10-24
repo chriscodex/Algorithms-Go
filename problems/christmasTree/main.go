@@ -15,6 +15,7 @@ func asteriskGenerator(cant int) string {
 	for i := 0; i < cant; i++ {
 		ast += "*"
 	}
+
 	fmt.Println(ast)
 	return ast
 }
